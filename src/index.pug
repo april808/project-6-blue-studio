@@ -1,0 +1,128 @@
+//- 導覽列
+nav.navbar.navbar-default.navbar-fixed-top.at_top
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='#header_index') Blue Studio
+    #navbar.navbar-collapse.collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#section_about') About
+        li.active
+          a(href='#section_works')
+            | Works 
+            span.sr-only (current)
+        li
+          a(href='#section_contact') Contact
+    // /.nav-collapse
+
+//首頁
+header#header_index
+  .container
+    img.icon(src="https://od.lk/s/NDRfMzQ5NTEzNTZf/Logo_W.png", alt="")
+    img.marginbottom.mountain(src="https://svgshare.com/i/iFC.svg", alt="")
+    .explore.at_top EXPLORE
+//關於
+section#section_about
+  img.marginbottom(src="https://svgshare.com/i/iGy.svg", alt="")
+  img#ge(src="https://od.lk/s/NDRfMzQ5NTEzNzVf/ge_left.png", alt="")
+  #cross
+  .container
+    .row
+      .col-sm-8.col-sm-offset-4
+        img.tri.tri1(src="https://awiclass.monoame.com/img/webpic/w_tri1.svg", alt="")
+        h2.r1text WORKS IN BLUE
+    .row
+      .col-sm-4
+        img.tri.tri2(src="https://awiclass.monoame.com/img/webpic/w_tri2.svg", alt="")
+      .col-sm-8
+        img.tri.tri3(src="https://awiclass.monoame.com/img/webpic/w_tri3.svg", alt="")
+        h3.r2text BLUE STUDIO - Website Design / Development
+        h3.r2text Interactive Art Design
+    .row
+      .col-sm-8
+        h2.r3text 430 MORE SUCCESS CASES
+    .clearfix
+    .row
+      .col-sm-4.btn-area
+        a.btn.btn-lg.btn-default(href="#section_works") MORE STORY
+        img.tri.tri4(src="https://awiclass.monoame.com/img/webpic/w_tri4.svg", alt="")
+      .col-sm-4
+        img.tri.tri5(src="https://awiclass.monoame.com/img/webpic/w_tri5.svg", alt="")
+        
+//服務
+section#section_service
+  .container
+    .row
+      .col-sm-12
+        h1 Service
+      .col-sm-4
+        img.icon_service(src="https://awiclass.monoame.com/img/webpic/w_service_icon1.svg", alt="")
+        h3 CI/VI Design
+      .col-sm-4
+        img.icon_service(src="https://awiclass.monoame.com/img/webpic/w_service_icon2.svg", alt="")
+        h3 MotionGraphic
+      .col-sm-4
+        img.icon_service(src="https://awiclass.monoame.com/img/webpic/w_service_icon3.svg", alt="")
+        h3 Web Development
+        
+//作品
+section#section_works
+  img.marginbottom.mountain(src="https://svgshare.com/i/iXS.svg", alt="")
+  .container#app
+    .row(v-if="works.length>0")
+      .col-sm-12
+        h1 Works
+      .col-sm-6.work.big
+        img(:src="works[1].img", alt="")
+        .texts
+          h4.title {{works[1].name}}
+          p.content(v-html="works[1].content.substr(0,40)")
+      .col-sm-6
+        .col-sm-6.work(v-for="w in works.slice(2,6)")
+          img(:src="w.img", alt="")
+          .texts
+            h4.title {{w.name}}
+            
+//聯絡
+section#section_contact
+  .group
+    img.sand(src="https://od.lk/s/NDRfMzQ5NTEzNDNf/sand_BG.png", alt="")
+    .oversand
+      img.garden_eels#ge_G(src="https://od.lk/s/NDRfMzQ5NTEzMDhf/garden_eels_G.png", alt="")
+      img.garden_eels#ge_Y(src="https://od.lk/s/NDRfMzQ5NTEzMDlf/garden_eels_Y.png", alt="")
+      img.garden_eels#ge_B(src="https://od.lk/s/NDRfMzQ5NTEzMDdf/garden_eels_B.png", alt="")
+    img.FG.sand(src="https://od.lk/s/NDRfMzQ5NTEzNDdf/sand_FG.png", alt="")
+    
+  .container
+    .row
+      .col-sm-6
+        //信件容器 限制最大寬度
+        .mails
+          //信封
+          .mailcover
+            img(src="https://svgshare.com/i/iWg.svg", alt="")
+          //信紙
+          .mailbody
+            h5 Dear Blue Studio
+            lable Name
+            input(type="text")
+            lable Email
+            input(type="text")
+            lable Content
+            textarea
+      .col-sm-6
+        h2 CONTACT
+        br
+        p If you have any question about us,<br>Don`t hestitate to contact us !
+        br
+        br
+        p BLUESTUDIO@gmail.com<br>ADDRESS: TAIWAN, TAIPEI , XORO Road<br>Phone: 02-12345678
+        
+//footer
+footer#footer
+  img.icon(src="https://od.lk/s/NDRfMzQ5NTEzNTVf/Logo_B.png", alt="")
