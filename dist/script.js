@@ -17,13 +17,6 @@ $(document).on('click','a',function(event){
   // return false;/* 終止處理。如果不添加，下次按點超連結錨點的時候可能會累積跳轉位置。 */
 })
   // 偵測進入花園鰻範圍----------------------
-// function detect_ge(ge_id,x){
-//   var geplace=$(ge_id).offset().left+$(ge_id).width()/2;
-//   if(Math.abs(x-geplace)<80)
-//     $(ge_id).css("bottom","-100px")
-//   else
-//     $(ge_id).css("bottom","0px")
-// }
 function detect_ge(ge_id,x){
   var geplace = $("#ge_G").offset().left + $("#ge_G").width()/2 
   if (Math.abs(x - geplace) < 80){
