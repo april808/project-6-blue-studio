@@ -62,18 +62,18 @@ $(window).mousemove(function(evt){
   var geplace=$("#ge").offset().left+$("#ge").width()/2;
   var getop=$("#ge").offset().top;
   
-  var img_url="https://od.lk/s/NDRfMzQ5NTEz";
+  var img_url="../assets/dir_eel/";
   
   if (pagex<geplace-50)
-    $("#ge").attr("src",img_url+"NzVf/ge_left.png")
+    $("#ge").attr("src",img_url+"ge_left.png")
   else if (pagex>geplace+50)
-    $("#ge").attr("src",img_url+"Nzdf/ge_right.png")
+    $("#ge").attr("src",img_url+"ge_right.png")
   else
-    $("#ge").attr("src",img_url+"ODFf/ge_top.png")
+    $("#ge").attr("src",img_url+"ge_top.png")
   if (pagex<geplace-50 && pagey<getop)
-    $("#ge").attr("src",img_url+"NzZf/ge_leftop.png")
+    $("#ge").attr("src",img_url+"ge_leftop.png")
   if (pagex>geplace+50 && pagey<getop)
-    $("#ge").attr("src",img_url+"ODBf/ge_righttop.png")
+    $("#ge").attr("src",img_url+"ge_righttop.png")
   //站起來的花園鰻-移動---------------------
     detect_ge("#ge_G",pagex);
     detect_ge("#ge_Y",pagex);
