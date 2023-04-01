@@ -3,6 +3,25 @@
   font-family: "Oswald", "微軟正黑體";
 }
 
+@media screen and (max-width: 765px) {
+  h2.r1text, h3.r2text, h2.r3text {
+    position: relative;
+    transform: translate(0.9em, -0.2em);
+  }
+
+  h2.r1text {
+    top: -0.5em;
+  }
+
+  h3.r2text {
+    top: -1em;
+  }
+
+  h2.r3text {
+    color: #ffcc0b;
+    top: 2em;
+  }
+}
 html, body {
   overflow-x: hidden;
   font-size: 16px;

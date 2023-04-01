@@ -18,6 +18,19 @@ $color_black: #003B45
 //   display: none
 // section#section_contact
 //   display: block
+@media screen and (max-width: 765px)
+  *
+    // border: solid 1px #fff !important
+  h2.r1text,h3.r2text,h2.r3text
+    position: relative
+    transform: translate(0.9em,-0.2em)
+  h2.r1text
+    top: -0.5em
+  h3.r2text
+    top: -1em
+  h2.r3text
+    color: darken($color_light_yellow,30)
+    top: 2em
 
 //-------------------------------------
 //一些常用的mixin
@@ -33,7 +46,7 @@ $color_black: #003B45
 html,body
   overflow-x: hidden
   font-size: 16px
-  
+
 //首頁
 header
   position: relative
