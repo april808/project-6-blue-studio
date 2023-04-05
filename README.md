@@ -3,7 +3,7 @@
 預覽：
 
 1. CodePen URL: [https://codepen.io/april808/pen/bGLKoGB](https://codepen.io/april808/pen/bGLKoGB).
-1. GitHub: [https://april808.github.io/project-6-blue-studio/dist/index.html](https://april808.github.io/project-6-blue-studio/dist/index.html)
+1. GitHub: [Blue Studio 設計工作室網站](./dist/index.html)
 
 說明：
 
